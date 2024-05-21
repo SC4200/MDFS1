@@ -2,6 +2,7 @@
 
 #include "Arduino.h"
 
+// stu: This should be explained too.
 ArmSteppers::ArmSteppers(byte allStepperPins[2][2]) {
   for (int i = 0; i < 2; i++) {
     for (int j = 0; j < 2; j++) {
@@ -44,6 +45,7 @@ float ArmSteppers::getBaseAxisHeading() {
 }
 
 // Private: Trig calculations to output the intended middle axis angle.
+// stu: perhaps this could be explained better? what is the "middle axis" 
 float ArmSteppers::getMiddleAxisHeading() {
   float _theta_c = acos((_kArmSideA * _kArmSideA + _kArmSideB * _kArmSideB -
                          _dist_side_c * _dist_side_c) /
