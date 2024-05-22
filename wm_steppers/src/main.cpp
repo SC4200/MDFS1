@@ -54,6 +54,7 @@ byte last_pod_state = 0;
 int i_step_pin = kStepMiddlePin;
 int i_dir_pin = kDirMiddlePin;
 
+// stu: should go through and comment this to be able to understand what is going on.
 void readData(int num) {
   if (num >= kWireArrayLength) {
     byte data[kWireArrayLength];
@@ -124,7 +125,7 @@ void collectPod(const int collect_pod[2]) {
 
 // Main State Machine. Testing required but relies on timing to reach each
 // location.
-void stateMachine() {
+void stateMachine() { // stu: make sure every state is labeled in an easy to understand way.
   switch (state) {
     case 0:  // waits for button press to begin track.
     case 1:
