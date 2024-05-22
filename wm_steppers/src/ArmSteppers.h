@@ -1,7 +1,7 @@
 #ifndef ArmSteppers_h
 #define ArmSteppers_h
 #include "Arduino.h"
-
+// stu: this is well explained already, i understand everything's meaning.
 // Code Overview:
 // This code delcares the class for Arm Stepper Motors, to use, we simply
 // enter the x and y values of a pod's location, these are in main.cpp
@@ -64,7 +64,7 @@ class ArmSteppers {
   unsigned long us_current_time;
 
   // RPM initial calculations
-  const float i_steps = 200;                  // Nema specs
+  const float i_steps = 200;                  // Nema motor specs
   float f_resolution = (float)360 / i_steps;  // step angle 0.9deg
   String s_RPM = "150";                       // set s_RPM prior to code
   float f_T = 1;                              // 1 millisecond, assuming above.
